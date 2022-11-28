@@ -1,0 +1,43 @@
+[
+    {
+        "id": "01",
+        "firstName": "admin",
+        "lastName": "mototire",
+        "email": "proyecto_mototire@gmail.com",
+        "password": "0303456",
+        "address": "Calle Falsa 123"
+    },
+    {
+        "id": "02",
+        "firstName": "Patricio",
+        "lastName": "Diaz",
+        "email": "patriciodiaznqn@hotmail.com",
+        "password": "12345",
+        "address": "Buenos Aires"
+    },
+    {
+        "id": "03",
+        "firstName": "Donnovan",
+        "lastName": "Facchini",
+        "email": "facchini.donnovan@gmail.com",
+        "password": "qwerty",
+        "address": "C/Sant Joaquim 19"
+    }
+    ,
+    {
+        "id": "04",
+        "firstName": "Nicolas",
+        "lastName": "Laya",
+        "email": "nicolaya23@gmail.com",
+        "password": "ytrewq",
+        "address": "Buenos Aires"
+    },
+    {
+        "id": "05",
+        "firstName": "Guillermo",
+        "lastName": "Bukowski",
+        "email": "",
+        "password": "qwerty",
+        "address": ""
+    }
+]
