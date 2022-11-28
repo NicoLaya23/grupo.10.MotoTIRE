@@ -9,18 +9,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersFilePath = path.resolve('./src/data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const renderHome = (req, res) => {
-    return res.render('index');
-};
-
 const controller = {
     index: (req,res) => {
         const inSaleProducts = products.filter(product => product.category == 'in-sale');
         const viewData = {inSaleProducts}
         return res.render("index", viewData);
-    },
-    create: (req, res) => {}
-
+    }
 };
 
-module.exports = {renderHome, controller};
+module.exports = {controller};
