@@ -20,3 +20,9 @@ Muchas cosas y otras de mejor manera manera como se puso aca arriba.
 ## Retrospectiva Sprint 2:
 
 ### Realizar una mejor division de tareas a lo largo de los sprints, encarar los distintos puntos con una comunicacion mas fluida a traves de reuniones semanales y mantener al tanto del dia a dia de que esta haciendo cada integrante por distintas vias de comunicacion, asi como mantener una mejor y mas clara organizacion mediante trello. Conseguir un mejor uso de GitHub para poder trabajar de manera mas fluida.
+
+## Retrospectiva Sprint 3:
+
+### Se hizo una mejor división de las tareas en relación al sprint anterior. Las problemáticas que surgieron presentaron mejores oportunidades de colaboración entre las distintas tareas asignadas a cada miembro del grupo. 
+
+
