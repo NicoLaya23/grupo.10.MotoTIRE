@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include ('../partials/header') %>
+        <link href="css/styles-login.css" rel="stylesheet">
+    </header>
+
+    <main>
+        
+        <h3 class="forms-subTitle">Ingresar</h3>
+        <h3 class="forms-subTitle"><a href="administrar-producto">Ingresar como admin</a></h3><br>
+        
+        <div class="forms">
+            <form role="form" method="post" action="/">
+                <div>
+                    <input type="text" name="userName" id="userName" minlength="2" size="40" class="inputText" placeholder="Nombre de usuario" required>
+                
+                </div><br>
+                
+                <div>
+                    <input type="password" name="password" id="password" size="40" class="inputText" placeholder="Contraseña"required>
+                </div><br><br>
+
+                <div class="buttonContainer">
+                    <button type="submit" class="formsButton">Entrar</button>       
+                </div> 
+
+            </form>
+        </div> <br>
+
+        <div class="banner">
+            <img src="img/banner-michelin.jpeg" class="bannerDunlop" alt="bannerMichelin">
+        </div><br>
+
+    </main>
+
+    <footer>
+        <%- include ('../partials/footer') %>
+    </footer>
+
+
+
+</body>
+
+</html>
