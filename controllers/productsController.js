@@ -10,6 +10,10 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersFilePath = path.resolve('./src/data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+// Express-validator
+const { validationResult } = require('express-validator');
+
+
 
 const productsController = {
 
@@ -29,16 +33,33 @@ const productsController = {
     },
 
     storeProduct: (req, res) => {
+        
+        const errors = validationResult(req);
+        console.log(errors.array());
+        if(!errors.isEmpty()){
+
+            return res.render(
+                'products/createProduct',
+                {
+                    errors: errors.array()
+                }
+                )
+        } else {
+
         const newProduct = req.body;
+        const newImage = req.files;
         newProduct.id = products.length + 1
         newProduct.price = Number(newProduct.price);
         newProduct.discount = Number(newProduct.discount);
         newProduct.availability = Number(newProduct.availability);
         newProduct.id = String(newProduct.id);
+        newProduct.img = newImage.img[0].filename
+        newProduct.subImgs = [newImage.subImgs[0].filename, newImage.subImgs[1].filename];
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         const viewData = {product: newProduct};
         return res.render('products/productDetail', viewData);
+        }
     },
 
     renderAdminProduct: (req, res) => {
@@ -53,10 +74,13 @@ const productsController = {
     },
 
     updateProduct: (req, res) => {
-        const newProduct = req.body
+        const newProduct = req.body;
+        const newImage = req.files;
         newProduct.price = Number(newProduct.price);
         newProduct.discount = Number(newProduct.discount);
         newProduct.availability = Number(newProduct.availability);
+        newProduct.img = newImage.img[0].filename
+        newProduct.subImgs = [newImage.subImgs[0].filename, newImage.subImgs[1].filename];
         
         const productIndex = products.findIndex((product)=>{
             return product.id == req.params.id
